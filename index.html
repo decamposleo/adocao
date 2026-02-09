@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adocao</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🐶 AAdoção de Cachorros - Palhoça / SC</h1>
+      <p>Encontre um amigo para a vida toda ❤️</p>
+    </header>
+
+    <main>
+      <div class="dog-card">
+        <img src="1.jpg" alt="Scorpion" />
+        <h3>Scorpion</h3>
+        <p>Estou à procura de um lar cheio de amor!</p>
+
+        <div class="btn-group">
+          <button onclick="openModal('Scorpion')">Adote-me</button>
+          <a
+            class="whatsapp-btn"
+            target="_blank"
+            href="https://wa.me/5548999036454?text=Olá! Tenho interesse em adotar o Scorpion"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="dog-card">
+        <img src="2.jpg" alt="Riden" />
+        <h3>Riden</h3>
+        <p>Sou brincalhão e adoro companhia!</p>
+
+        <div class="btn-group">
+          <button onclick="openModal('Riden')">Adote-me</button>
+          <a
+            class="whatsapp-btn"
+            target="_blank"
+            href="https://wa.me/5548999036454?text=Olá! Tenho interesse em adotar o Riden"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="dog-card">
+        <img src="3.jpg" alt="Ryou" />
+        <h3>Ryou</h3>
+        <p>Pronto para fazer parte da sua família!</p>
+
+        <div class="btn-group">
+          <button onclick="openModal('Ryou')">Adote-me</button>
+          <a
+            class="whatsapp-btn"
+            target="_blank"
+            href="https://wa.me/5548999036454?text=Olá! Tenho interesse em adotar o Ryou"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>📧 Contato: adocao@gmail.com | 📞 (48) 90000-0000</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Pedido de Adoção 🐶</h2>
+
+        <form name="adocao" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="adocao" />
+          <input type="hidden" name="cachorro" id="dog-name" />
+
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <textarea
+            name="mensagem"
+            placeholder="Por que você quer adotar?"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar pedido</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openModal(dogName) {
+        document.getElementById("modal").style.display = "flex";
+        document.getElementById("dog-name").value = dogName;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

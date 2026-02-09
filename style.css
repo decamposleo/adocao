@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+header {
+  background: #ff914d;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dog-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding-bottom: 1rem;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.dog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dog-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.dog-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.dog-card p {
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* BOTÕES LADO A LADO */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+button,
+.whatsapp-btn {
+  flex: 1;
+  max-width: 140px;
+  padding: 0.6rem 0;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+  background: #ff914d;
+  color: white;
+  text-decoration: none;
+}
+
+button:hover,
+.whatsapp-btn:hover {
+  background: #28a745;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #343a40;
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  width: 100%;
+  background: #28a745;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
